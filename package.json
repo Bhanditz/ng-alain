@@ -30,7 +30,9 @@
     "e2e": "ng e2e",
     "test": "ng test --watch",
     "test-coverage": "ng test --code-coverage --watch=false",
-    "color-less": "node scripts/color-less.js"
+    "color-less": "node scripts/color-less.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@angular/animations": "^6.1.0",
@@ -66,7 +68,8 @@
     "ngx-tinymce": "^2.0.0",
     "ngx-ueditor": "^2.0.0",
     "screenfull": "^3.3.1",
-    "qrious": "^4.0.2"
+    "qrious": "^4.0.2",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.8.0",
@@ -131,5 +134,6 @@
     "ignore": [
       "src/assets/*"
     ]
-  }
+  },
+  "snyk": true
 }
